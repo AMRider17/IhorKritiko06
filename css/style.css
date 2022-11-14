@@ -1,34 +1,203 @@
-body { /* 01 */
-    width: 80%;
-    margin: 0 auto;
+body {
+    background-image: url(../images/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
 }
 
 /* HEADER */
 
-.header__navigation {
-}
+.header,
+.main {
+    min-width: 1000px;
+    width: 80%;
+    margin: 0 auto;
 
-.logo__general {
-    position: fixed;
-    top: 5%;
-    z-index: 2;
-}
-
-.menu {
-    position: fixed;
-    top: 5%;
-    right: 45%;
-    z-index: 3;
-}
-
-.logo__asside {
-    position: fixed;
-    top: 5%;
-    right: 0;
-    z-index: 4;
 }
 
 .header {
-    background-color: rgb(0, 135, 254);
+    display: flex;
+    flex-direction: row;
+    background-color: #ffff877c;
+    border-radius: 100px;
+}
+
+.logo {
+    width: 30%;
+    text-align: center; /* картинка по центру блока */
+}
+
+.logo__picture {
+    padding: 5%;
+    width: 55%;
+}
+
+.menu {
+    width: 65%;
+    text-align: center; /* текст по центру блока */
+    margin: 0;
+    padding: 0;
+    padding-top: 5%;
+    list-style: none;
+    font-size: 0;
+}
+
+.menu>.menu__item {
+    font-size: 16px;
+    display: inline-block;
+    margin: 5px 20px;
+    position: relative;
+}
+
+.menu .submenu {
+    padding: 0;
+    position: absolute;
+    overflow: hidden;
+    height: 0;
+    opacity: 0;
+    transition: opacity 2s, height 1s;
+}
+
+.menu .submenu .submenu__item {
+    display: block;
+    margin: 0;
+}
+
+.submenu__item,
+.menu__link {
+    text-decoration: none;
+    background-color: bisque;
+    border-radius: 15px;
+    border: 3px solid #005c74;
+    padding: 5px;
+}
+
+.submenu__link,
+.menu__link,
+.footer__link {
+    text-decoration: none;
+    font-size: 1.4rem;
+}
+
+.submenu__link:hover,
+.footer__link:hover {
+    text-decoration: underline;
+    color: #005c74;
+}
+
+.menu__item:hover .submenu {
+    margin: 0;
+    height: 300px;
+    opacity: 1;
+    transition: opacity 2s, height 1s;
+}
+
+/* MAIN */
+
+.adv__header,
+.main__header {
+    text-align: center;
+    padding: 2%;
+    margin: 5%;
+    background-color: #ff4a30;
+    border-radius: 20px;
+    color: #ffff87;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+.main__container {
+    width: 80%;
+}
+
+.main__adv {
+    width: 20%;
+    margin-left: 3%;
+}
+
+.container {
+    display: flex;
+}
+
+.shop {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15%;
+}
+
+.adv__picture {
+    width: 100%;
+}
+
+.shop__title {
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+
+.shop__item {
+    width: 30%;
+    border: 5px solid #002a26;
+    padding: 5%;
+}
+
+.item__description,
+.adv__description {
+    text-indent: 2rem;
+    font-size: 1.1rem;
+    color: #005c74;
+    margin: 2%;
+}
+
+.item__buy {
+    text-decoration: none;
+    padding: 2%;
+    border-radius: 50px;
+}
+
+.item__buy:hover {
+    text-decoration: underline;
+    background-color: #ffff87;
+}
+
+.item__img {
+    width: 100%;
+}
+
+.anchor__link {
+    text-transform: uppercase;
+}
+
+/* 10 */
+.anchor__link {
+    width: 20%;
+    position: fixed;
+    bottom: 2%;
+    right: 0;
+    display: block;
     z-index: 1;
+}
+
+/* 10 */
+.anchor__picture {
+    width: 30%;
+}
+
+/* FOOTER */
+
+.footer {
+    width: 100%; /* указали ширину футера на всю страницу */
+    padding-top: 0.6%; /* внутренний отступ сверху */
+    padding-bottom: 0.6%; /* внутренний отступ снизу */
+    position: fixed; /* позиция футера зафиксирована вне зависимости от скрола */
+    bottom: 0; /* позиция футера зафиксирована внизу браузера буз отступов */
+    background-color: rgb(201, 131, 131); /* задний фон блока для правильного и красивого просмотра футера */
+    text-align: center; /* текст по центру блока */
+}
+
+.footer__link {
+    color: yellow;
 }
