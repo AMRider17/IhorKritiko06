@@ -1,222 +1,181 @@
-.wrapper {
-    background: fixed no-repeat center/100% 100% url(../images/bg.jpg);
+body { /* 10 */
+    background: fixed no-repeat center/100% 100% url(../images/bg.jpg); /* задний фон всей начальной страницы */
 }
 
-.wrapper__raffle {
-    background: fixed no-repeat center/100% 100% url(../images/raffle_bg.jpg);
+.wrapper__raffle { /* 10 */
+    background: fixed no-repeat center/100% 100% url(../images/raffle_bg.jpg); /* задний фон всей второй страницы */
 }
 
-/* HEADER */
-
-.header,
-.main {
-    min-width: 800px;
-    width: 80%;
-    margin: 0 auto;
+.header, /* 10 */
+.main { /* 10 */
+    min-width: 800px; /* минимальная ширина указанных блоков */
+    width: 80%; /* ширина указанных блоков */
+    margin: 0 auto; /* убирает наружные отступы и ставит блоки по центру */
 }
 
-.header {
-    display: flex;
-    /* flex-direction: row; */
-    border-radius: 100px;
+.header, /* 10 */
+.container, /* 10 */
+.shop { /* 10 */
+    display: flex; /* делает элементы внутри блока гибкими */
 }
 
-.logo {
-    width: 30%;
+.logo { /* 10 */
+    width: 30%; /* максимальная ширина блока */
     text-align: center; /* картинка по центру блока */
 }
 
-.logo__picture {
-    padding: 5%;
-    width: 55%;
+.logo__picture { /* 10 */
+    padding: 5%; /* внутренний отступ для картинки внутри блока */
+    width: 55%; /* максимальная ширина картинки */
 }
 
-.menu {
-    width: 65%;
-    text-align: center; /* текст по центру блока */
-    padding: 5% 0 0 0;
-    list-style: none;
-    font-size: 0;
+.menu { /* 10 */
+    width: 65%; /* максимальная ширина блока меню */
+    padding: 5% 0 0; /* внутренний отступ для меню внутри блока */
+    font-size: 0; /* размер шрифта */
 }
 
-.menu>.menu__item {
-    font-size: 16px;
-    display: inline-block;
-    margin: 5px 20px;
-    position: relative;
+.main__header--special { /* 10 */
+    font-size: 2rem; /* размер шрифта */
 }
 
-.menu .submenu {
-    padding: 0;
-    position: absolute;
-    overflow: hidden;
-    height: 0;
-    opacity: 0;
-    transition: opacity 2s, height 1s;
+.menu>.menu__item { /* 20 */
+    display: inline-block; /* позволяет задавать ширину и высоту элементам */
+    margin: 5px 20px; /* внешний отступ */
+    position: relative; /* сдвигает элемент относительно его обычного положения */
 }
 
-.menu .submenu .submenu__item {
-    display: block;
-    margin: 0;
+.menu .submenu { /* 20 */
+    padding: 0; /* убирает внутренние отступы */
+    position: absolute; /* элемент исчезает с того места где он должен быть и позиционируется заново */
+    overflow: hidden; /* изменяет размеры до тех пор, пока не вместит в себя все дочерние элементы */
+    height: 0; /* высота будет рассчитываться в зависимости от контента по этому нужно указать 0 */
+    opacity: 0; /* полная прозрачность элемента */
+    transition: opacity 2s, height 1s; /* как долго длиться переход и прозрачность элементов */
 }
 
-.submenu__item,
-.menu__link {
-    background-color: bisque;
-    border-radius: 50% 20% / 10% 40%;
-    border: 3px solid #005c74;
-    padding: 5px;
+.menu .submenu .submenu__item { /* 30 */
+    display: block; /* элемент становится блочным */
+    margin: 0; /* внешний отступ */
 }
 
-.submenu__link,
-.menu__link,
-.footer__link,
-.submenu__item,
-.shop__title {
-    text-decoration: none;
-    font-size: 1.4rem;
+.submenu__item, /* 10 */
+.menu__link { /* 10 */
+    background-color: bisque; /* цвет заднего фона */
+    border-radius: 50% 20% / 10% 40%; /* углы рамки скруглены по радиусу */
+    border: 3px solid #005c74; /* рамка элементов меню */
+    padding: 5px; /* внутренний отступ для элементов меню */
 }
 
-.submenu__link:hover,
-.footer__link:hover {
-    text-decoration: underline;
-    color: #005c74;
+.submenu__link, /* 10 */
+.menu__link, /* 10 */
+.submenu__item, /* 10 */
+.shop__title { /* 10 */
+    text-decoration: none; /* убирает оформление текста */
+    font-size: 1.4rem; /* размер текста в указанных элементах */
 }
 
-.menu__item:hover .submenu {
-    margin: 0;
-    height: 300px;
-    opacity: 1;
-    transition: opacity 2s, height 1s;
+.submenu__link:hover { /* 20 */
+    text-decoration: underline; /* делает текст подчеркнутым при наведении */
+    color: #005c74; /* цвет подчеркивания текста при наведении */
 }
 
-/* MAIN */
-
-.main__adv,
-.main__header,
-.subtitle {
-    text-align: center;
-    padding: 2%;
-    background-color: #005c74;
-    border-radius: 20px;
-    color: #ffff87;
+.shop__title:hover { /* 20 */
+    text-decoration: underline; /* делает текст подчеркнутым при наведении */
+    background-color: #ffff87; /* цвет подчеркивания текста при наведении */
 }
 
-.main__header {
-    margin: 5%;
+.menu__item:hover .submenu { /* 30 */
+    margin: 0; /* убирает внешний отступ */
+    height: 300px; /* ограниченная высота для элементов чтоб они не были очень длинными при наведении */
+    opacity: 1; /* при наведении прозрачности нет */
+    transition: opacity 2s, height 1s; /* как долго длиться переход и прозрачность элементов */
 }
 
-h1 {
-    font-size: 5rem;
+.main__header, /* 10 */
+.subtitle { /* 10 */
+    text-align: center; /* текст по центру */
+    padding: 2%; /* внутренний отступ */
+    background-color: #005c74; /* цвет заднего фона */
+    border-radius: 20px; /* скругляем задний фон по радиусу */
+    color: #ffff87; /* цвет текста */
 }
 
-.main__container {
-    width: 80%;
+.main__header { /* 10 */
+    margin: 5%; /* внешний отступ */
 }
 
-.main__adv {
-    width: 20%;
-    margin-left: 3%;
+h1 { /* 01 */
+    font-size: 5rem; /* размер текста */
 }
 
-.container {
-    display: flex;
-    align-items: flex-start;
+.main__container { /* 10 */
+    width: 80%; /* максимальная ширина блока */
 }
 
-.container__special {
-    text-indent: 2rem;
-    flex-direction: column;
+.main__adv, /* 10 */
+.anchor__picture { /* 10 */
+    width: 30%; /* максимальная ширина блока */
 }
 
-.shop {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 15%;
+.container { /* 10 */
+    align-items: flex-start; /* выравнивает элементы от начала главной оси */
 }
 
-.adv__picture,
-.item__img {
-    width: 100%;
+.container__special { /* 10 */
+    text-indent: 2rem; /* делает абзац для первой строки */
+    flex-direction: column; /* отображает элементы внутри блока столбцом  */
 }
 
-.shop__title {
-    font-size: 1.8rem;
+.shop { /* 10 */
+    justify-content: space-around; /* равномерно распределяет элементы внутри блока, у всех одинаковое пространство */
+    margin-bottom: 15%; /* внешний отступ снизу для блока */
 }
 
-.shop__item {
-    width: 30%;
-    border: 5px solid #002a26;
-    padding: 2%;
+.adv__picture, /* 10 */
+.item__img, /* 10 */
+.shop, /* 10 */
+.footer { /* 10 */
+    width: 100%; /* ширина элементов чтобы они не были больше самих блоков */
 }
 
-.item__description,
-.adv__description,
-.raffle__description {
-    text-indent: 2rem;
-    color: #005c74;
-    padding: 5px;
-    margin: 2%;
-    background-color: #ffff87d7;
-    font-size: 1.3rem;
-    border-radius: 20px;
+.shop__title { /* 10 */
+    font-size: 1.8rem; /* размер текста */
 }
 
-.description__special {
-    margin-bottom: 10%;
+.shop__item { /* 10 */
+    width: 40%; /* ширина блоков */
+    border: 5px solid #002a26; /* рамка для блоков с указанными характеристиками */
+    padding: 2%; /* внутренний отступ */
 }
 
-.item__buy {
-    text-decoration: none;
-    padding: 2%;
-    border-radius: 50px;
-    font-size: 1.5rem;
+.item__description, /* 10 */
+.raffle__description { /* 10 */
+    text-indent: 2rem; /* делает абзац для первой строки */
+    color: #005c74; /* цвет текста */
+    padding: 5px; /* внутренний отступ */
+    margin: 2%; /* внешний отступ */
+    background-color: #ffff87d7; /* цвет заднего фона */
+    font-size: 1.3rem; /* размер текста */
+    border-radius: 20px; /* скругляем задний фон по радиусу */
 }
 
-.item__buy:hover,
-.shop__title:hover {
-    text-decoration: underline;
-    background-color: #ffff87;
+.description__special { /* 10 */
+    margin-bottom: 10%; /* внешний отступ снизу для блока */
 }
 
-.anchor__link {
-    text-transform: uppercase;
+.anchor__link { /* 10 */
+    width: 20%; /* ширина якоря */
+    position: fixed; /* положение якоря зафиксировано */
+    bottom: 2%; /* положение якоря отступает от низа экрана на указанное значение */
+    right: 0; /* положение якоря примыкает к правой стороне */
+    display: block; /* элемент отображается как блочный */
+    z-index: 1; /* положение якоря поверх всего контента */
 }
 
-/* 10 */
-.anchor__link,
-.recall__link {
-    width: 20%;
-    position: fixed;
-    bottom: 2%;
-    right: 0;
-    display: block;
-    z-index: 1;
-}
-
-.recall__link {
-    right: 7%;
-    z-index: 2; 
-}
-
-.anchor__picture, /* 10 */
-.recall__picture { /* 10 */
-    width: 30%;
-}
-
-/* FOOTER */
-
-.footer {
-    width: 100%; /* указали ширину футера на всю страницу */
-    padding-top: 0.6%; /* внутренний отступ сверху */
-    padding-bottom: 0.6%; /* внутренний отступ снизу */
+.footer { /* 10 */
     position: fixed; /* позиция футера зафиксирована вне зависимости от скрола */
     bottom: 0; /* позиция футера зафиксирована внизу браузера буз отступов */
-    background-color: rgb(201, 131, 131); /* задний фон блока для правильного и красивого просмотра футера */
+    background-color: rgb(211, 169, 169); /* задний фон блока для правильного и красивого просмотра футера */
     text-align: center; /* текст по центру блока */
-}
-
-.footer__link {
-    color: yellow;
 }
