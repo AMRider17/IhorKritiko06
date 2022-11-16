@@ -71,7 +71,8 @@
 .submenu__link,
 .menu__link,
 .footer__link,
-.submenu__item {
+.submenu__item,
+.shop__title {
     text-decoration: none;
     font-size: 1.4rem;
 }
@@ -125,7 +126,7 @@ h1 {
 
 .container__special {
     text-indent: 2rem;
-    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .shop {
@@ -157,8 +158,9 @@ h1 {
     color: #005c74;
     padding: 5px;
     margin: 2%;
-    background-color: #ffff87b3;
+    background-color: #ffff87d7;
     font-size: 1.3rem;
+    border-radius: 20px;
 }
 
 .description__special {
@@ -172,7 +174,8 @@ h1 {
     font-size: 1.5rem;
 }
 
-.item__buy:hover {
+.item__buy:hover,
+.shop__title:hover {
     text-decoration: underline;
     background-color: #ffff87;
 }
